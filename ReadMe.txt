@@ -1,0 +1,8 @@
+This project was created to demonstrate the vulnerability of storing YOUR data on services such as: LightShot.
+The application is developed solely for educational, informational purposes. Work is possible only with YOUR personal data, and the data of the people who gave you permission. It is an offense to work with other people's data without their knowledge. By using this application you confirm that you have read this message and agree with the halo against.
+The author is not responsible for how this application will be used, for the consequences of its use, and all the harm that it can bring.
+Responsibility for everything that happens as a result of using this application lies with the person who uses it.
+Этот проект создан для демонстрации уязвимости хранения ВАШИХ данных на таких сервисах как :LightShot .
+Приложение разработанно исключительно в образовательных , ознакомительных целях. Работа возможна лишь с ВАШИМИ личными данными, и данными людей которые дали вам разрешение. Работа с данными других людей без из ведома является правонарушением. Используя это приложение вы потверждаете что прочли данное сообщение и согласны с нимб в противном случае не используйте приложение .
+Автор не несет ответсвенности за то как будет использлованно данное приложени, за последствия его использования, и весь вред которое оно может принести.
+Ответсвенность за все что произойдет в слдедствии использолвания данного приложения лежит на человеке которой его использует .
