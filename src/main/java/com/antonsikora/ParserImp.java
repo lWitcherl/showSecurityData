@@ -39,6 +39,7 @@ public class ParserImp extends Thread {
         try {
             downloadUsingNIO(href, part+"\\files\\"+dataEntity.getProgress()+".png");
         } catch (IOException e) {
+            System.out.println(e);
             dataEntity.setException();
         }
 

@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class GUI extends JFrame  {
+public class GUI extends JFrame {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
@@ -13,11 +13,12 @@ public class GUI extends JFrame  {
     private JSpinner spinner1;
     private JProgressBar progressBar1;
     private JSpinner spinner2;
+    private ProgressMonitor pm;
 
     public GUI() {
         setContentPane(contentPane);
         //setModal(true);
-       // setModalExclusionType(ModalExclusionType.TOOLKIT_EXCLUDE);
+        // setModalExclusionType(ModalExclusionType.TOOLKIT_EXCLUDE);
         getRootPane().setDefaultButton(buttonOK);
 
         buttonOK.addActionListener(new ActionListener() {
@@ -67,7 +68,7 @@ public class GUI extends JFrame  {
         System.exit(0);
     }
 
-    private void progressBar(){
+    private void progressBar() {
         progressBar1.setMinimum(0);
         progressBar1.setMaximum((int) Math.pow(42, Dispatcher.getCharacter()));
         progressBar1.setStringPainted(true);
@@ -78,10 +79,10 @@ public class GUI extends JFrame  {
                 progressBar1.setValue(dataEntity.getProgressForBar());
                 try {
                     Thread.sleep(2000);
-                } catch (InterruptedException e) { }
-                if(!dataEntity.getException()){
+                } catch (InterruptedException e) {
+                }
+                if (!dataEntity.getException()) {
                     progressBar1.setString("bad response  from server, recommend stop process");
-                    return;
                 }
             }
             progressBar1.setValue(100);
@@ -94,6 +95,7 @@ public class GUI extends JFrame  {
         dialog.pack();
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(null);
+        dialog.setTitle("show security data");
         dialog.setVisible(true);
         dialog.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //System.exit(0);
@@ -116,10 +118,10 @@ public class GUI extends JFrame  {
      */
     private void $$$setupUI$$$() {
         contentPane = new JPanel();
-        contentPane.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(3, 1, new Insets(10, 10, 10, 10), -1, -1));
+        contentPane.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(4, 1, new Insets(10, 10, 10, 10), -1, -1));
         final JPanel panel1 = new JPanel();
         panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
-        contentPane.add(panel1, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, 1, null, null, null, 0, false));
+        contentPane.add(panel1, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, 1, null, null, null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer1 = new com.intellij.uiDesigner.core.Spacer();
         panel1.add(spacer1, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
         final JPanel panel2 = new JPanel();
@@ -164,7 +166,9 @@ public class GUI extends JFrame  {
         spinner2 = new JSpinner();
         panel4.add(spinner2, new com.intellij.uiDesigner.core.GridConstraints(5, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         progressBar1 = new JProgressBar();
-        contentPane.add(progressBar1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        contentPane.add(progressBar1, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        final JScrollPane scrollPane1 = new JScrollPane();
+        contentPane.add(scrollPane1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
     }
 
     /**
