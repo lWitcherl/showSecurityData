@@ -17,8 +17,8 @@ public class DataEntity {
 
     public DataEntity() {
     }
-    synchronized public void setException(){
-        exception = true;
+    synchronized public void setException(boolean status){
+        exception = status;
     }
     public boolean getException(){
         return exception;
